@@ -25,6 +25,7 @@
     <module>iterator-design-pattern</module>
     <module>hotel-booking-visitor-design-pattern</module>
     <module>shopping-cart-visitor-design-pattern</module>
+    <module>adaptor-design-pattern</module>
   </modules>
 
   <properties>
