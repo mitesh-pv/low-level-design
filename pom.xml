@@ -29,6 +29,7 @@
     <module>bridge-design-patten</module>
     <module>composite-design-pattern-file-system</module>
     <module>calculator-composite-design-pattern</module>
+    <module>decorator-pattern-pizza-cost-calculator</module>
   </modules>
 
   <properties>
