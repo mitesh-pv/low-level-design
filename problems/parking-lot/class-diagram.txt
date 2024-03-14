@@ -1,0 +1,155 @@
+# Parking Lot LLD
+
+Objects Required
+1. ParkingSpot
+2. Vehicle
+3. Ticket
+4. EntranceGate
+5. ExitGate
+
+
+## Entities
+
+1.
+--------------------
+ParkingSpot
+--------------------
+id: Integer
+isEmpty: Boolean
+vehicle: Vehicle
+--------------------
++ blockSpot(Vehicle)
++ freeSpot()
+--------------------
+
+-----------------------------------
+TwoWheelerParkingSpot : ParkingSpot
+-----------------------------------
+price: double
+-----------------------------------
++ getPrice()
+-----------------------------------
+
+-----------------------------------
+FourWheelerParkingSpot : ParkingSpot
+-----------------------------------
+price: double
+-----------------------------------
++ getPrice()
+-----------------------------------
+
+2.
+-------------------------
+Vehicle
+-------------------------
+vehicleNo: String
+vehicleType: VehicleType - ENUM (TWO_WHEELER, FOUR_WHEELER)
+-------------------------
+
+3.
+-------------------------
+Ticket
+-------------------------
+id: String
+parkingSpot: ParkingSpot
+vehicle: Vehicle
+entryTime: long
+-------------------------
+
+
+## Managers/Services
+
+---------------------------------
+ParkingSpotManager
+---------------------------------
+parkingSpots: List<ParkingSpot>
+parkingStrategy: ParkingStrategy
+----------------------------------
++ findFreeParkingSpot(VehicleType)
++ parkVehicle(Vehicle)
++ removeVehicle(ParkingSpot)
+
++ addParkingSpot()
++ removeParkingSpot()
+----------------------------------
+
+-------------------------------------------------
+TwoWheelerParkingSpotManager : ParkingSpotManager
+-------------------------------------------------
+parkingSpots: List<ParkingSpot>
+-------------------------------------------------
+
+-------------------------------------------------
+FourWheelerParkingSpotManager : ParkingSpotManager
+-------------------------------------------------
+parkingSpots: List<ParkingSpot>
+-------------------------------------------------
+
+-------------------------------------------------
+ParkingSpotManagerFactory
+-------------------------------------------------
+parkingSpot: ParkingSpot
+-------------------------------------------------
++ getParkingSpitManager(VehicleType)
+-------------------------------------------------
+
+
+-----------------
+ParkingStrategy
+----------------
+
+------------------------------
+NearEntrance: ParkingStrategy
+------------------------------
+
+--------------------------
+NearExit: ParkingStrategy
+--------------------------
+
+## Controllers
+
+Entrance
+------------
+parkingSpotManagerFactory: ParkingSpotManagerFactory
+parkingSpotManager: ParkingSpotManager
+------------
++ findFreeSpot(VehicleType)
++ blockParkingSpot(Vehicle)
++ generateTicket(vehicle)
+------------
+
+
+Exit
+------------
+ticket: Ticket
+parkingSpotManagerFactory: ParkingSpotManagerFactory
+parkingSpotManager: ParkingSpotManager
+
+payment: PaymentService
+
+costComputationFactory: CostComputationFactory
+CostComputation: CostComputation
+-----------
++ calculatePrice(Ticket)
++ processPayment(Ticket)
++ freeParkingSpot(ParkingSpot)
+------------
+
+
+CostComputationStrategy
+-----------------------
+
+
+TwoWheelerCostComputationStrategy: CostComputationStrategy
+-------------------------
+
+
+FourWheelerCostComputationStrategy: CostComputationStrategy
+--------------------------
+
+CostComputationFactory
+------------------------
+costComputationStrategy: CostComputationStrategy
+------------------------
++ getCostComputationStrategy(VehicleType)
+------------------------

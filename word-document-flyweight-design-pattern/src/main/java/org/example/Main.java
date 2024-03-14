@@ -1,7 +1,6 @@
 package org.example;
 
 import org.example.fluweight.Char;
-import org.example.fluweight.DocumentChar;
 
 public class Main {
 
