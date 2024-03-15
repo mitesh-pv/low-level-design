@@ -1,4 +1,4 @@
-package org.example.strategy;
+package org.example.strategy.parking;
 
 import java.util.List;
 import org.example.entity.parkingspot.ParkingSpot;

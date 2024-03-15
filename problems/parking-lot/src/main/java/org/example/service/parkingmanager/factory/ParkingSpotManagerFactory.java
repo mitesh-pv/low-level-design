@@ -6,7 +6,7 @@ import org.example.entity.vehicle.VehicleType;
 import org.example.service.parkingmanager.FourWheelerParkingSpotManager;
 import org.example.service.parkingmanager.ParkingSpotManager;
 import org.example.service.parkingmanager.TwoWheelerParkingSpotManager;
-import org.example.strategy.ParkingStrategy;
+import org.example.strategy.parking.ParkingStrategy;
 
 public class ParkingSpotManagerFactory {
   private static ParkingSpotManager parkingSpotManager;

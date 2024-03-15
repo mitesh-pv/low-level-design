@@ -1,7 +1,8 @@
-package org.example.service.costcomputation;
+package org.example.strategy.costcomputation;
 
 import org.example.entity.Ticket;
 import org.example.service.pricing.PricingStrategy;
+import org.example.strategy.costcomputation.CostComputationStrategy;
 
 public class TwoWheelerCostComputationStrategy extends CostComputationStrategy {
 

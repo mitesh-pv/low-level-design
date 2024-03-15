@@ -32,6 +32,8 @@
     <module>decorator-pattern-pizza-cost-calculator</module>
     <module>problems</module>
     <module>word-document-flyweight-design-pattern</module>
+    <module>problems/design-tic-tac-toe</module>
+    <module>problems/logger-system</module>
   </modules>
 
   <properties>

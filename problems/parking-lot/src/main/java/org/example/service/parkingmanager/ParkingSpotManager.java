@@ -5,7 +5,7 @@ import java.util.List;
 import lombok.Data;
 import org.example.entity.parkingspot.ParkingSpot;
 import org.example.entity.vehicle.Vehicle;
-import org.example.strategy.ParkingStrategy;
+import org.example.strategy.parking.ParkingStrategy;
 
 @Data
 public class ParkingSpotManager {

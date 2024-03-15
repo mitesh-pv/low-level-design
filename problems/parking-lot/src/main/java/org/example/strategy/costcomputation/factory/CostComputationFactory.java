@@ -1,9 +1,9 @@
-package org.example.service.costcomputation.factory;
+package org.example.strategy.costcomputation.factory;
 
 import org.example.entity.vehicle.VehicleType;
-import org.example.service.costcomputation.CostComputationStrategy;
-import org.example.service.costcomputation.FourWheelerCostComputationStrategy;
-import org.example.service.costcomputation.TwoWheelerCostComputationStrategy;
+import org.example.strategy.costcomputation.CostComputationStrategy;
+import org.example.strategy.costcomputation.FourWheelerCostComputationStrategy;
+import org.example.strategy.costcomputation.TwoWheelerCostComputationStrategy;
 import org.example.service.pricing.PerHourPricingStrategy;
 import org.example.service.pricing.PerMinutePricingStrategy;
 
