@@ -34,6 +34,7 @@
     <module>word-document-flyweight-design-pattern</module>
     <module>problems/design-tic-tac-toe</module>
     <module>problems/logger-system</module>
+    <module>problems/enhanced-logger-design</module>
   </modules>
 
   <properties>
