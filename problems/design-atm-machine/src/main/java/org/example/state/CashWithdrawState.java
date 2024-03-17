@@ -1,13 +1,20 @@
 package org.example.state;
 
+import org.example.chain.CashWithdrawalProcessor;
+import org.example.chain.FiveHundredHandler;
+import org.example.chain.HundredHandler;
+import org.example.chain.TwoThousandHandler;
 import org.example.context.ATMMachine;
 import org.example.model.BankAccount;
 import org.example.model.User;
 
 public class CashWithdrawState extends ATMState {
+  private CashWithdrawalProcessor cashWithdrawalProcessor;
 
   public CashWithdrawState(ATMMachine machine) {
     super(machine);
+    cashWithdrawalProcessor =
+        new TwoThousandHandler(new FiveHundredHandler(new HundredHandler(null)));
   }
 
   @Override
