@@ -36,6 +36,7 @@
     <module>problems/logger-system</module>
     <module>problems/enhanced-logger-design</module>
     <module>problems/book-my-show</module>
+    <module>problems/hashmap-design</module>
   </modules>
 
   <properties>
