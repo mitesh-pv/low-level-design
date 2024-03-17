@@ -20,7 +20,6 @@
     <module>memento-design-pattern</module>
     <module>observer-design-pattern</module>
     <module>state-design-pattern</module>
-    <module>vending-machine-state-design-pattern</module>
     <module>strategy-design-pattern</module>
     <module>iterator-design-pattern</module>
     <module>hotel-booking-visitor-design-pattern</module>
@@ -37,6 +36,7 @@
     <module>problems/enhanced-logger-design</module>
     <module>problems/book-my-show</module>
     <module>problems/hashmap-design</module>
+    <module>problems/design-atm-machine</module>
   </modules>
 
   <properties>
