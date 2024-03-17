@@ -35,6 +35,7 @@
     <module>problems/design-tic-tac-toe</module>
     <module>problems/logger-system</module>
     <module>problems/enhanced-logger-design</module>
+    <module>problems/book-my-show</module>
   </modules>
 
   <properties>
