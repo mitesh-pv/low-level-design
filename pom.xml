@@ -37,6 +37,9 @@
     <module>problems/book-my-show</module>
     <module>problems/hashmap-design</module>
     <module>problems/design-atm-machine</module>
+    <module>problems/elevator-design</module>
+    <module>problems/car-rental-system</module>
+    <module>problems/rate-limiter</module>
   </modules>
 
   <properties>
