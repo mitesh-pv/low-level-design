@@ -17,7 +17,11 @@ public class Main {
     User user = new User(new Card("1234566788", "3344"),
         new BankAccount(123141312L, 20000D));
 
+    System.out.println("Display amount flow");
     displayBalanceFlow(machine, state, user);
+
+    System.out.println();
+    System.out.println("Withdraw cash flow");
     withdrawCash(machine, state, user, 10000D);
 
   }

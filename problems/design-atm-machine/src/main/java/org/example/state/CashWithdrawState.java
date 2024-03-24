@@ -29,7 +29,7 @@ public class CashWithdrawState extends ATMState {
     }
 
     account.setBalance(account.getBalance() - amount);
-    System.out.println("Please withdraw cash of " + account);
+    System.out.println("Please withdraw cash of " + amount);
     returnCard();
     machine.setState(new IdleState(machine));
   }
