@@ -40,6 +40,8 @@
     <module>problems/elevator-design</module>
     <module>problems/car-rental-system</module>
     <module>problems/rate-limiter</module>
+    <module>notification-system-decorator-pattern</module>
+    <module>pizza-decorator</module>
   </modules>
 
   <properties>
