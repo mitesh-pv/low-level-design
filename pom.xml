@@ -43,6 +43,8 @@
     <module>notification-system-decorator-pattern</module>
     <module>problems/coupon-system</module>
     <module>problems/employee-dept-notification-system</module>
+    <module>problems/music-player</module>
+    <module>problems/employee-and-his-dependents</module>
   </modules>
 
   <properties>
