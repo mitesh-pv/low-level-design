@@ -41,7 +41,8 @@
     <module>problems/car-rental-system</module>
     <module>problems/rate-limiter</module>
     <module>notification-system-decorator-pattern</module>
-    <module>pizza-decorator</module>
+    <module>problems/coupon-system</module>
+    <module>problems/employee-dept-notification-system</module>
   </modules>
 
   <properties>
