@@ -11,16 +11,22 @@ public class Main {
 
   public static void main(String[] args) {
 
-    IEmployee engineer = new Employee("4", "Sean", "Engineer");
-    IEmployee manager = new Leaders("2", "Peter", "Manager", Arrays.asList(engineer));
-    IEmployee directory = new Leaders("1", "Elon", "Director", Arrays.asList(manager));
+    IEmployee engineer = new Employee("4", "Sean", "Engineer", "test");
+    IEmployee manager = new Leaders("2", "Peter", "Manager", "test", Arrays.asList(engineer));
+    IEmployee directory = new Leaders("1", "Elon", "Director", "management", Arrays.asList(manager));
 
     directory.printDetails();
 
-    IEmployee searchEmployee = directory.searchEmployee("2");
+    IEmployee searchEmployee = directory.searchEmployeeById("2");
     System.out.println(searchEmployee);
+    System.out.println();
 
     System.out.println("Dependents of Peter");
     searchEmployee.printDetails();
+    System.out.println();
+
+    System.out.println("Employee family of test department");
+    IEmployee searchEmpFamilyByDept = directory.searchEmployeeHierarchyByDepartment("test");
+    searchEmpFamilyByDept.printDetails();
   }
 }

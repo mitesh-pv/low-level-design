@@ -7,8 +7,8 @@ public class Leaders extends Employee implements IEmployee {
 
   private List<IEmployee> reportingEmployees;
 
-  public Leaders(String id, String name, String designation, List<IEmployee> employees) {
-    super(id, name, designation);
+  public Leaders(String id, String name, String designation, String department, List<IEmployee> employees) {
+    super(id, name, designation, department);
     this.reportingEmployees = new ArrayList<>();
     this.reportingEmployees.addAll(employees);
   }
@@ -20,16 +20,30 @@ public class Leaders extends Employee implements IEmployee {
   }
 
   @Override
-  public IEmployee searchEmployee(String id) {
+  public IEmployee searchEmployeeById(String id) {
     if (this.getId().equals(id)) {
       return this;
     }
 
     IEmployee e = null;
     for (IEmployee emp: reportingEmployees) {
-      e = emp.searchEmployee(id);
+      e = emp.searchEmployeeById(id);
     }
 
     return e;
+  }
+
+  @Override
+  public IEmployee searchEmployeeHierarchyByDepartment(String department) {
+    if (this.getDepartment().equals(department)) {
+      return this;
+    }
+
+    IEmployee iEmployee = null;
+    for (IEmployee e: reportingEmployees) {
+      iEmployee = e.searchEmployeeHierarchyByDepartment(department);
+    }
+
+    return iEmployee;
   }
 }

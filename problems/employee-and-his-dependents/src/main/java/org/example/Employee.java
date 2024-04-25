@@ -4,13 +4,15 @@ import lombok.Data;
 
 @Data
 public class Employee implements IEmployee {
-  private String id;
-  private String name;
-  private String department;
+  protected String id;
+  protected String name;
+  protected String designation;
+  protected String department;
 
-  public Employee(String id, String name, String department) {
+  public Employee(String id, String name, String designation, String department) {
     this.id = id;
     this.name = name;
+    this.designation = designation;
     this.department = department;
   }
 
@@ -20,7 +22,7 @@ public class Employee implements IEmployee {
   }
 
   @Override
-  public IEmployee searchEmployee(String id) {
+  public IEmployee searchEmployeeById(String id) {
     if (this.id.equals(id)) {
       return this;
     }
