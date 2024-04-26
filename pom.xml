@@ -45,6 +45,8 @@
     <module>problems/employee-dept-notification-system</module>
     <module>problems/music-player</module>
     <module>problems/employee-and-his-dependents</module>
+    <module>problems/splitwise-design</module>
+    <module>problems/text-editor-with-undo-redo-feature</module>
   </modules>
 
   <properties>
